@@ -12,13 +12,17 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { DirectivesModule } from 'src/directives/directives.module';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { IonicGestureConfig } from '../utils/IonicGestureConfig'
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { AppAvailability } from '@ionic-native/app-availability/ngx';
 @NgModule({
   declarations: [
     AppComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModul ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ],
   providers: [
+      InAppBrowser,
+      AppAvailability,
     StatusBar,
     SplashScreen,
     SpeechRecognition,
