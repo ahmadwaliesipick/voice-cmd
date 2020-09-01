@@ -13,7 +13,7 @@
         <ion-icon name="mic"></ion-icon>
       </ion-fab-button>
     </ion-fab>
-    {{matches[0]}}
+    <span *ngIf="matches" >{{matches[0]}}</span>
   </div>
   <!-- <ion-card *ngIf="matches">
     <p>{{matches[0]}}</p>

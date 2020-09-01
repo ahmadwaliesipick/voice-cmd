@@ -13,7 +13,11 @@ import { DirectivesModule } from 'src/directives/directives.module';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { IonicGestureConfig } from '../utils/IonicGestureConfig'
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { AppAvailability } from '@ionic-native/app-availability/ngx';
+
+import { Brightness } from '@ionic-native/brightness/ngx';
+import { Flashlight } from '@ionic-native/flashlight/ngx';
+import { AudioManagement } from '@ionic-native/audio-management/ngx';
+import { BluetoothLE } from '@ionic-native/bluetooth-le/ngx';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,11 +25,15 @@ import { AppAvailability } from '@ionic-native/app-availability/ngx';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ],
   providers: [
-      InAppBrowser,
-      AppAvailability,
+    Brightness,
+    Flashlight,
+    AudioManagement,
+    BluetoothLE,
+    InAppBrowser,
     StatusBar,
     SplashScreen,
     SpeechRecognition,
+
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AndroidPermissions,
     {
